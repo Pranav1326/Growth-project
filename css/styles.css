@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --black-font: #000;
+    --light-silver: rgb(130, 130, 130);
+    --bold-silver: rgb(120, 120, 120);
+    --border-rad-3: 3px;
+    --border-rad-10: 10px;
+    --span-size: 1rem;
+    --input-font: 1.1rem;
+    --active-color: rgb(0, 89, 255);
+    --bold-font: 700;
+    --light-font: 600;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+}
+
+.card{
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    width: 29rem;
+    min-height: 30rem;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.title h1{
+    font-size: 1.6rem;
+    font-weight: var(--bold-font);
+}
+
+.title p{
+    font-size: var(--span-size);
+    font-weight: var(--light-font);
+    color: var(--light-silver);
+}
+
+.project-sec .project{
+    font-size: var(--span-size);
+    font-weight: var(--bold-font);
+    color: var(--bold-silver);
+}
+
+.details-sec{
+    height: 100%;
+}
+
+.name,
+.location,
+.phone-number{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.name span,
+.location span,
+.phone-number span{
+    font-size: var(--span-size);
+    font-weight: var(--bold-font);
+    color: var(--bold-silver);
+    margin-bottom: 0.5rem;
+}
+
+.name input,
+.location input,
+.phone-number input{
+    border-radius: var(--border-rad-3);
+    border: 1px solid var(--light-silver);
+    font-size: var(--input-font);
+    padding: 0.8rem;
+}
+
+.name input:focus,
+.name input:hover,
+.name input:active,
+.location input:focus, 
+.location input:hover, 
+.location input:active, 
+.phone-number input:focus,
+.phone-number input:hover,
+.phone-number input:active
+{
+    outline: 2px solid var(--active-color);
+}
+
+.phone-number input{
+    letter-spacing: 1px;
+    padding-left: 4rem;
+}
+
+.phone-number{
+    position: relative;
+}
+
+.phone-number img{
+    width: 32px;
+    height: 20px;
+    position: absolute;
+    left: 0.9rem;
+    top: 2.8rem;
+}
+
+.phone-number input::-webkit-outer-spin-button,
+.phone-number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.next-btn{
+    width: 100%;
+    font-size: var(--input-font);
+    padding: 1.5rem 0;
+    margin: 1rem 0;
+    color: #fff;
+    font-weight: var(--bold-font);
+    background-color: var(--active-color);
+    border: none;
+    border-radius: var(--border-rad-3);
+    letter-spacing: 1px;
+}
+
+.next-btn:hover{
+    cursor: pointer;
+}
+
+.buttons-sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.design,
+.projects{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--light-silver);
+    border-radius: var(--border-rad-3);
+    width: 11rem;
+    padding: 1rem 0.5rem;
+    color: var(--bold-silver);
+    font-size: 1rem;
+    font-weight: var(--bold-font);
+    letter-spacing: 0.5px;
+}
+
+.design svg,
+.projects svg{
+    width: 25px;
+    height: auto;
+    color: var(--bold-silver);
+    margin: 0 0.7rem;
+}
+
+.design:hover,
+.design:focus,
+.projects:hover,
+.projects:focus{
+    background-color: rgba(0, 89, 255, 0.05);
+    outline: 1px solid var(--active-color);
+    color: var(--active-color);
+    cursor: pointer;
+}
+
+.design svg:hover,
+.design svg:active,
+.design svg:focus,
+.projects svg:hover,
+.projects svg:active,
+.projects svg:focus{
+    color: var(--active-color);
+}
+
+.design:hover.design svg,
+.design:focus.design svg,
+.projects:focus.projects svg,
+.projects:hover.projects svg
+{
+    color: var(--active-color);
+}
