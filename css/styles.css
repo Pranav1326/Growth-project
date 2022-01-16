@@ -18,6 +18,8 @@
 }
 
 body{
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,4 +192,29 @@ body{
 .projects:hover.projects svg
 {
     color: var(--active-color);
+}
+
+@media only screen and (max-width: 500px){
+    .card{
+        margin: 2rem 1rem;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 461px){
+    .buttons-sec{
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    .buttons-sec button{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 376px){
+    .card{
+        margin: 2rem 0;
+        width: 21rem;
+    }
 }
